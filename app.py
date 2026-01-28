@@ -1,15 +1,22 @@
+from db.database import init_db, log_prediction
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import joblib
+import numpy as np
 import pandas as pd
 
 app = Flask(__name__)
+init_db()
 CORS(app)
 
 # Load Trained Model
 # -----------------------------------
-MODEL_PATH = "model/model.joblib"
-model = joblib.load(MODEL_PATH)
+# MODEL_PATH = "model/model.joblib"
+# model = joblib.load(MODEL_PATH)
+
+ensemble = joblib.load("model/ensemble_model.joblib")
+models = ensemble["models"]
+selected_models = ensemble["selected_models"]
 
 REQUIRED_FIELDS = [
     "default",
@@ -41,19 +48,33 @@ def predict():
     input_df = pd.DataFrame([data])
 
     # 3. Predict probability
-    probability = model.predict_proba(input_df)[0][1]
+    probabilities = []
 
-    # 4. Threshold logic (STRICT)
-    if probability < 0.5:
-        prediction = 0
-        message = "Customer will NOT subscribe to bank Term Deposit"
-    else:
-        prediction = 1
-        message = "Customer will subscribe to bank Term Deposit"
+    for model_name in selected_models:
+        model = models[model_name]
+        prob = model.predict_proba(input_df)[0][1]
+        probabilities.append(prob)
+
+    final_probability = float(np.mean(probabilities))
+    prediction = 1 if final_probability >= 0.5 else 0
+
+    message = (
+        "Customer will subscribe bank Term Deposit"
+        if prediction == 1
+        else "Customer will NOT subscribe bank Term Deposit"
+    )
+
+        
+    log_prediction(
+        data=data,
+        probability=round(final_probability, 4),
+        prediction=prediction,
+        message=message
+    )
 
     # 5. Return response
     return jsonify({
-        "probability": round(float(probability), 4),
+        "probability": round(final_probability, 4),
         "prediction": prediction,
         "message": message
     })

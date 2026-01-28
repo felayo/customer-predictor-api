@@ -1,0 +1,21 @@
+id,default_value,balance,housing,day,month,campaign,previous,poutcome,probability,prediction,message,created_at
+1,no,20424,no,20,mar,6,1,unknown,0.5306,1,Customer will subscribe to bank Term Deposit,2026-01-26 09:55:41
+2,yes,36886,yes,13,mar,16,5,failure,0.4263,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:33:54
+3,yes,42220,yes,21,dec,18,9,success,0.5452,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:35:05
+4,no,2965,no,3,oct,16,2,unknown,0.479,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:37:01
+5,yes,2616,yes,12,jul,11,8,success,0.4514,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:38:47
+6,no,28435,no,20,oct,10,5,unknown,0.4811,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:40:04
+7,no,47616,yes,17,dec,2,9,failure,0.4289,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:41:06
+8,no,22140,yes,24,jul,11,5,failure,0.5022,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:43:33
+9,yes,-661,yes,25,jul,17,2,success,0.5077,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:45:10
+10,no,31897,no,28,sep,19,2,other,0.4773,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:50:43
+11,no,35764,yes,23,dec,18,0,failure,0.569,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:52:22
+12,yes,18529,yes,27,mar,18,8,success,0.525,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:53:19
+13,yes,32873,yes,10,jan,1,5,unknown,0.5064,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:54:27
+14,no,41570,no,10,jan,3,7,failure,0.4739,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:55:38
+15,no,6661,yes,30,apr,12,6,other,0.6215,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:56:42
+16,yes,4958,no,5,jun,14,9,success,0.5156,1,Customer will subscribe to bank Term Deposit,2026-01-27 12:57:56
+17,no,15979,no,17,feb,1,9,failure,0.4523,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 12:59:09
+18,yes,3786,yes,5,aug,5,4,success,0.4494,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 13:00:22
+19,yes,43386,yes,25,feb,15,0,other,0.5866,1,Customer will subscribe to bank Term Deposit,2026-01-27 13:01:33
+20,yes,48748,yes,9,may,19,7,success,0.2311,0,Customer will NOT subscribe to bank Term Deposit,2026-01-27 13:02:49
