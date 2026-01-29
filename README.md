@@ -14,7 +14,7 @@ React GUI
 Flask REST API
    |
    v
-Machine Learning Model (Artificial Neural Network, Logistic Regression, Gradient Boosting, LightGBM, Gradient Descent)
+Machine Learning Model (Artificial Neural Network, Logistic Regression, Gradient Boosting, LightGBM, Xgboost)
    |
    v
 SQLite Database (Prediction Logs)
