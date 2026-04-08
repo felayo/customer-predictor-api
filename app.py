@@ -14,7 +14,7 @@ CORS(app)
 # MODEL_PATH = "model/model.joblib"
 # model = joblib.load(MODEL_PATH)
 
-ensemble = joblib.load("model/ensemble_model.joblib")
+ensemble = joblib.load("model/model.joblib")
 models = ensemble["models"]
 selected_models = ensemble["selected_models"]
 
